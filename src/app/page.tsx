@@ -1,12 +1,12 @@
-import HeroSection from '@/components/HeroSection';
-import BusinessSection from '@/components/BusinessSection';
-import FeatureSection from '@/components/FeatureSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import PortfolioSection from '@/components/PortfolioSection';
-import TeamSection from '@/components/TeamSection';
-import ClientSection from '@/components/ClientSection';
-import ContactUsSection from '@/components/ContactUsSection';
-import TechnologySection from '@/components/TechnologySection';
+import HeroSection from '@/layouts/HeroSection';
+import BusinessSection from '@/layouts/BusinessSection';
+import FeatureSection from '@/layouts/FeatureSection';
+import BenefitsSection from '@/layouts/BenefitsSection';
+import PortfolioSection from '@/layouts/PortfolioSection';
+import TeamSection from '@/layouts/TeamSection';
+import ClientSection from '@/layouts/ClientSection';
+import ContactUsSection from '@/layouts/ContactUsSection';
+import TechnologySection from '@/layouts/TechnologySection';
 
 export default function Home() {
   return (

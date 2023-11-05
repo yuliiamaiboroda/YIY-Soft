@@ -1,10 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Montserrat } from 'next/font/google';
+import Header from '@/layouts/Header';
+import Footer from '@/layouts/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'YIY Soft',
@@ -19,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${montserat.className} flex flex-col min-h-screen`}>
         <Header />
         {children}
         <Footer />
