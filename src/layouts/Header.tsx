@@ -8,7 +8,7 @@ interface IProps {}
 
 export default function Header({}: IProps) {
   return (
-    <header className="fixed top-0 left-0 w-full bg-semiTransparent backdrop-blur-[2px]">
+    <header className="fixed left-0 top-0 w-full bg-semiTransparent backdrop-blur-[2px]">
       <Container>
         <div className="flex">
           <Logo />
