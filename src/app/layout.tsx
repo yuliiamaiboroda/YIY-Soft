@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserat.className} flex flex-col min-h-screen`}>
+      <body className={`${montserat.className} flex min-h-screen flex-col`}>
         <Header />
         {children}
         <Footer />

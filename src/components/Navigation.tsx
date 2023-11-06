@@ -10,9 +10,13 @@ interface IProps {}
 
 export default function Navigation({}: IProps) {
   return (
-    <ul className="text-secondary text-xl">
+    <ul
+      className="flex flex-col items-start gap-10 text-xl 
+                 text-secondary md:mr-16 md:flex-row
+                 md:items-center xl:mr-36 xl:gap-12"
+    >
       {navigationLinks.map(({ label, href }) => (
-        <li key={href} className="[&:not(:last-child)]:mb-10">
+        <li key={href} className=" ">
           <Link href={href}>{label}</Link>
         </li>
       ))}
