@@ -9,6 +9,6 @@
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",
   "proseWrap": "always",
-  "tailwindConfig": "./tailwind.config.js",
+  "tailwindConfig": "./tailwind.config.ts",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
