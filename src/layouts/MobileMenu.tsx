@@ -28,7 +28,7 @@ export default function MobileMenu({}: IProps) {
       >
         <div>
           <LanguageSwitcher />
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
         <button type="button" onClick={() => setIsMenuOpen(false)}>
           <svg className="h-6 w-6">

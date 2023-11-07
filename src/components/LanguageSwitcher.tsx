@@ -1,9 +1,30 @@
-interface IProps {}
+'use client';
 
-export default function LanguageSwitcher({}: IProps) {
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { i18n } from '@/i18n-config';
+
+export default function LanguageSwitcher() {
+  const pathName = usePathname();
+  const redirectedPathName = (locale: string) => {
+    if (!pathName) return '/';
+    const segments = pathName.split('/');
+    segments[1] = locale;
+    return segments.join('/');
+  };
+
   return (
-    <div className="mb-10 text-xl text-secondary md:mb-0 md:flex md:items-center">
-      UA | EN
+    <div>
+      <p>Locale switcher:</p>
+      <ul>
+        {i18n.locales.map(locale => {
+          return (
+            <li key={locale}>
+              <Link href={redirectedPathName(locale)}>{locale}</Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

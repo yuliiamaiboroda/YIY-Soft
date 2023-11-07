@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
+import { Locale } from '@/i18n-config';
 
 const montserat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -17,13 +18,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { lang },
 }: {
   children: React.ReactNode;
+  params: { lang: Locale };
 }) {
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={`${montserat.className} flex min-h-screen flex-col`}>
-        <Header />
+        <Header lang={lang} />
         {children}
         <Footer />
       </body>

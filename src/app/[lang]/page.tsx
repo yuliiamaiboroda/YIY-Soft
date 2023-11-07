@@ -8,10 +8,18 @@ import ClientSection from '@/layouts/ClientSection';
 import ContactUsSection from '@/layouts/ContactUsSection';
 import TechnologySection from '@/layouts/TechnologySection';
 
-export default function Home() {
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
+
+export default function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
   return (
     <main>
       <HeroSection />
+      <p>Current locale: {lang}</p>
       <BusinessSection />
       <FeatureSection />
       <BenefitsSection />
