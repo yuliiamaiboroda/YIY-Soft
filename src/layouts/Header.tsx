@@ -21,7 +21,7 @@ export default function Header({ lang }: IProps) {
           <Link href="/" className="mr-auto">
             <Logo />
           </Link>
-          <div className="hidden md:flex">
+          <div className="hidden md:flex md:items-center">
             <Navigation lang={lang} />
             <LanguageSwitcher />
           </div>

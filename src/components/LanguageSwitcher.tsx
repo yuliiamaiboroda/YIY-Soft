@@ -14,17 +14,26 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div>
-      <p>Locale switcher:</p>
-      <ul>
-        {i18n.locales.map(locale => {
-          return (
-            <li key={locale}>
-              <Link href={redirectedPathName(locale)}>{locale}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul className="flex text-xl text-secondary">
+      {i18n.locales.map(locale => {
+        return (
+          <li
+            key={locale}
+            className="relative mb-10 after:absolute after:right-0
+                        after:top-0 after:h-full after:w-0.5 after:bg-secondary md:mb-0
+                        [&:not(:first-child)]:after:hidden"
+          >
+            <Link
+              href={redirectedPathName(locale)}
+              className={`px-2 ${
+                locale === pathName.split('/')[1] ? ' font-semibold' : ''
+              }`}
+            >
+              {locale === 'en' ? 'EN' : 'UA'}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
