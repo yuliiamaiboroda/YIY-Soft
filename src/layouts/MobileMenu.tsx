@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import Navigation from '@/components/Navigation';
+// import Navigation from '@/components/Navigation';
 
 interface IProps {}
 
