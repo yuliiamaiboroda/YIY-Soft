@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
-// const navigationLinks = [
-//   { label: 'Services', href: '#services' },
-//   { label: 'Portfolio', href: '#portfolio' },
-//   { label: 'Contacts', href: '#contacts' },
-// ];
+enum NavLink {
+  services = '#services',
+  portfolio = '#portfolio',
+  contacts = '#contacts',
+}
+
+const navigationLinks = Object.entries(NavLink).map(([label, href]) => ({
+  label: label as keyof typeof NavLink,
+  href,
+}));
 
 interface IProps {
   dictionary: {
@@ -19,24 +22,67 @@ interface IProps {
 export default function Navigation({ dictionary }: IProps) {
   return (
     <ul
-      className="flex flex-col items-start gap-10 text-xl 
-                 text-secondary md:mr-16 md:flex-row
-                 md:items-center xl:mr-36 xl:gap-12"
+      className="flex flex-col items-start gap-10 
+                 text-xl text-secondary md:mr-16
+                 md:flex-row md:items-center xl:mr-36 xl:gap-12
+                 [&>li]:w-full"
     >
-      {/* {navigationLinks.map(({ label, href }) => (
+      {navigationLinks.map(({ label, href }) => (
         <li key={href} className=" ">
-          <Link href={href}>{dictionary.navigation[label]}</Link>
+          <Link href={href}>{dictionary[label]}</Link>
         </li>
-      ))} */}
-      <li>
-        <Link href="#services">{dictionary.services}</Link>
-      </li>
-      <li>
-        <Link href="#portfolio">{dictionary.portfolio}</Link>
-      </li>
-      <li>
-        <Link href="#contacs">{dictionary.contacts}</Link>
-      </li>
+      ))}
     </ul>
   );
 }
+
+// import Link from 'next/link';
+
+// interface IProps {
+//   dictionary: {
+//     services: string;
+//     portfolio: string;
+//     contacts: string;
+//   };
+// }
+
+// interface IDic {
+//   services: string;
+//   portfolio: string;
+//   contacts: string;
+// }
+
+// interface INavLink {
+//   label: keyof IDic;
+//   href: string;
+// }
+
+// const navLinks: INavLink[] = [
+//   { label: 'services', href: '#services' },
+//   { label: 'portfolio', href: '#portfolio' },
+//   { label: 'contacts', href: '#contacts' },
+// ];
+
+// export default function Navigation({ dictionary }: IProps) {
+//   // const navigationLinks = [
+//   //   { label: dictionary.services, href: '#services' },
+//   //   { label: dictionary.portfolio, href: '#portfolio' },
+//   //   { label: dictionary.contacts, href: '#contacts' },
+//   // ];
+//   return (
+//     <ul
+//       className="flex flex-col items-start gap-10
+//                  text-xl text-secondary md:mr-16
+//                  md:flex-row md:items-center
+//                  xl:mr-36 xl:gap-12"
+//     >
+//       {navLinks.map(({ label, href }) => (
+//         <li key={href} className="w-full">
+//           <Link href={href} className="block w-full">
+//             {dictionary[label]}
+//           </Link>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }

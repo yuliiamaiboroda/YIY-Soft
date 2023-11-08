@@ -1,5 +1,7 @@
+import Section from './Section';
+
 interface IProps {}
 
 export default function TeamSection({}: IProps) {
-  return <div>TeamSection</div>;
+  return <Section id="contacts">TeamSection</Section>;
 }

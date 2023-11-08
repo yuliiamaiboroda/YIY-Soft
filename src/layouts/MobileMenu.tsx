@@ -26,8 +26,9 @@ export default function MobileMenu({ dictionary }: IProps) {
         </svg>
       </button>
       <div
-        className={`fixed right-0 top-0 flex min-h-screen 
-                  min-w-[50%] items-start justify-between bg-primary
+        onClick={() => setIsMenuOpen(false)}
+        className={`fixed right-0 top-0  min-h-screen 
+                  min-w-[50%] bg-primary
                   px-4 py-5 md:hidden ${
                     isMenuOpen ? '' : 'translate-x-full'
                   } transition-transform duration-200`}
@@ -36,11 +37,9 @@ export default function MobileMenu({ dictionary }: IProps) {
           <LanguageSwitcher />
           <Navigation dictionary={dictionary} />
         </div>
-        <button type="button" onClick={() => setIsMenuOpen(false)}>
-          <svg className="h-6 w-6">
-            <use href="images/icons.svg#cross"></use>
-          </svg>
-        </button>
+        <svg className="pointer-events-none absolute right-6 top-6 h-6 w-6">
+          <use href="images/icons.svg#cross"></use>
+        </svg>
       </div>
     </>
   );
