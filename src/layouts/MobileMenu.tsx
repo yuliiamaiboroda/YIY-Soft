@@ -29,7 +29,7 @@ export default function MobileMenu({ dictionary }: IProps) {
         onClick={() => setIsMenuOpen(false)}
         className={`fixed right-0 top-0  min-h-screen 
                   min-w-[50%] bg-primary
-                  px-4 py-5 md:hidden ${
+                  px-4 py-6 md:hidden ${
                     isMenuOpen ? '' : 'translate-x-full'
                   } transition-transform duration-200`}
       >
