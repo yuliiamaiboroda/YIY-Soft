@@ -11,7 +11,7 @@ import TechnologySection from '@/layouts/TechnologySection';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
 
-export default async function Home({
+export default function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
