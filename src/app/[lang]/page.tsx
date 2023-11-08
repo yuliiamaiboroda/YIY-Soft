@@ -11,14 +11,14 @@ import TechnologySection from '@/layouts/TechnologySection';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
 
-export default function Home({
+export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
   return (
     <main>
-      <HeroSection />
+      <HeroSection lang={lang} />
       <p>Current locale: {lang}</p>
       <BusinessSection />
       <FeatureSection />
