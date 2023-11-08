@@ -21,11 +21,12 @@ export default function LanguageSwitcher() {
             key={locale}
             className="relative mb-10 after:absolute after:right-0
                         after:top-0 after:h-full after:w-0.5 after:bg-secondary md:mb-0
-                        [&:not(:first-child)]:after:hidden"
+                        [&:not(:first-child)]:pl-2 [&:not(:first-child)]:after:hidden
+                        [&:not(:last-child)]:pr-2"
           >
             <Link
               href={redirectedPathName(locale)}
-              className={`px-2 ${
+              className={`${
                 locale === pathName.split('/')[1] ? ' font-semibold' : ''
               }`}
             >

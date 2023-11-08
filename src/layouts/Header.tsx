@@ -7,10 +7,14 @@ import Link from 'next/link';
 import { Locale } from '@/i18n-config';
 
 interface IProps {
-  lang: Locale;
+  dictionary: {
+    services: string;
+    portfolio: string;
+    contacts: string;
+  };
 }
 
-export default function Header({ lang }: IProps) {
+export default function Header({ dictionary }: IProps) {
   return (
     <header
       className="fixed left-0 top-0 z-50 w-full items-center 
@@ -22,10 +26,10 @@ export default function Header({ lang }: IProps) {
             <Logo />
           </Link>
           <div className="hidden md:flex md:items-center">
-            <Navigation lang={lang} />
+            <Navigation dictionary={dictionary} />
             <LanguageSwitcher />
           </div>
-          <MobileMenu />
+          <MobileMenu dictionary={dictionary} />
         </div>
       </Container>
     </header>

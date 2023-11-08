@@ -21,17 +21,18 @@ export async function generateStaticParams() {
   return [{ lang: 'uk' }, { lang: 'en' }];
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { lang },
 }: {
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
+  const dictionary = await getDictionary(lang);
   return (
     <html lang={lang}>
       <body className={`${montserat.className} flex min-h-screen flex-col`}>
-        <Header lang={lang} />
+        <Header dictionary={dictionary.navigation} />
         {children}
         <Footer />
       </body>
