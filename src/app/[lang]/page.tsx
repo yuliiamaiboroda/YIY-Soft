@@ -18,7 +18,7 @@ export default function Home({
 }) {
   return (
     <main>
-      <HeroSection />
+      <HeroSection lang={lang} />
       <p>Current locale: {lang}</p>
       <BusinessSection />
       <FeatureSection />

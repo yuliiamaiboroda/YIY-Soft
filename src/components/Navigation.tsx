@@ -9,12 +9,14 @@ import { getDictionary } from '@/get-dictionary';
 // ];
 
 interface IProps {
-  lang: Locale;
+  dictionary: {
+    services: string;
+    portfolio: string;
+    contacts: string;
+  };
 }
 
-export default async function Navigation({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-
+export default function Navigation({ dictionary }: IProps) {
   return (
     <ul
       className="flex flex-col items-start gap-10 text-xl 
@@ -27,13 +29,13 @@ export default async function Navigation({ lang }: IProps) {
         </li>
       ))} */}
       <li>
-        <Link href="#services">{dictionary.navigation.services}</Link>
+        <Link href="#services">{dictionary.services}</Link>
       </li>
       <li>
-        <Link href="#portfolio">{dictionary.navigation.portfolio}</Link>
+        <Link href="#portfolio">{dictionary.portfolio}</Link>
       </li>
       <li>
-        <Link href="#contacs">{dictionary.navigation.contacts}</Link>
+        <Link href="#contacs">{dictionary.contacts}</Link>
       </li>
     </ul>
   );

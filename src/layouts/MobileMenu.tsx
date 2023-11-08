@@ -1,11 +1,17 @@
 'use client';
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-// import Navigation from '@/components/Navigation';
+import Navigation from '@/components/Navigation';
 
-interface IProps {}
+interface IProps {
+  dictionary: {
+    services: string;
+    portfolio: string;
+    contacts: string;
+  };
+}
 
-export default function MobileMenu({}: IProps) {
+export default function MobileMenu({ dictionary }: IProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -21,14 +27,14 @@ export default function MobileMenu({}: IProps) {
       </button>
       <div
         className={`fixed right-0 top-0 flex min-h-screen 
-                  w-1/2 items-start justify-between bg-primary
+                  min-w-[50%] items-start justify-between bg-primary
                   px-4 py-5 md:hidden ${
                     isMenuOpen ? '' : 'translate-x-full'
                   } transition-transform duration-200`}
       >
         <div>
           <LanguageSwitcher />
-          {/* <Navigation /> */}
+          <Navigation dictionary={dictionary} />
         </div>
         <button type="button" onClick={() => setIsMenuOpen(false)}>
           <svg className="h-6 w-6">
