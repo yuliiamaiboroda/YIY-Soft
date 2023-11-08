@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google';
 import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
 import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
 const montserat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
   description:
     'Welcome to our YIY Soft – where innovation, expertise, and creativity unite to bring your digital dreams to life.',
 };
+
+export async function generateStaticParams() {
+  return [{ lang: 'uk' }, { lang: 'en' }];
+}
 
 export default function RootLayout({
   children,
