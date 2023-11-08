@@ -1,17 +1,13 @@
+import Link from 'next/link';
 import Container from './Container';
 import MobileMenu from './MobileMenu';
 import Logo from '@/components/Logo';
 import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import Link from 'next/link';
-import { Locale } from '@/i18n-config';
+import { INavigationDictionary } from '@/types/navigation';
 
 interface IProps {
-  dictionary: {
-    services: string;
-    portfolio: string;
-    contacts: string;
-  };
+  dictionary: INavigationDictionary;
 }
 
 export default function Header({ dictionary }: IProps) {

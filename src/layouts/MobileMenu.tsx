@@ -2,13 +2,10 @@
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Navigation from '@/components/Navigation';
+import { INavigationDictionary } from '@/types';
 
 interface IProps {
-  dictionary: {
-    services: string;
-    portfolio: string;
-    contacts: string;
-  };
+  dictionary: INavigationDictionary;
 }
 
 export default function MobileMenu({ dictionary }: IProps) {

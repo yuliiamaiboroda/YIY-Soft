@@ -1,10 +1,5 @@
 import Link from 'next/link';
-
-enum NavLink {
-  services = '#services',
-  portfolio = '#portfolio',
-  contacts = '#contacts',
-}
+import { NavLink, INavigationDictionary } from '../types';
 
 const navigationLinks = Object.entries(NavLink).map(([label, href]) => ({
   label: label as keyof typeof NavLink,
@@ -12,11 +7,7 @@ const navigationLinks = Object.entries(NavLink).map(([label, href]) => ({
 }));
 
 interface IProps {
-  dictionary: {
-    services: string;
-    portfolio: string;
-    contacts: string;
-  };
+  dictionary: INavigationDictionary;
 }
 
 export default function Navigation({ dictionary }: IProps) {
@@ -29,7 +20,14 @@ export default function Navigation({ dictionary }: IProps) {
     >
       {navigationLinks.map(({ label, href }) => (
         <li key={href} className="w-full ">
-          <Link href={href} className="block w-full py-2 md:px-4">
+          <Link
+            href={href}
+            className="block w-full rounded-md border
+                      border-transparent py-2
+                      transition-colors duration-200
+                      md:px-4 md:hover:border-secondary
+                      md:active:border-accent md:active:text-accent"
+          >
             {dictionary[label]}
           </Link>
         </li>
