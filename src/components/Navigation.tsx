@@ -1,42 +1,37 @@
 import Link from 'next/link';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
+import { NavLink, INavigationDictionary } from '../types';
 
-// const navigationLinks = [
-//   { label: 'Services', href: '#services' },
-//   { label: 'Portfolio', href: '#portfolio' },
-//   { label: 'Contacts', href: '#contacts' },
-// ];
+const navigationLinks = Object.entries(NavLink).map(([label, href]) => ({
+  label: label as keyof typeof NavLink,
+  href,
+}));
 
 interface IProps {
-  dictionary: {
-    services: string;
-    portfolio: string;
-    contacts: string;
-  };
+  dictionary: INavigationDictionary;
 }
 
 export default function Navigation({ dictionary }: IProps) {
   return (
     <ul
-      className="flex flex-col items-start gap-10 text-xl 
-                 text-secondary md:mr-16 md:flex-row
-                 md:items-center xl:mr-36 xl:gap-12"
+      className="flex flex-col items-start gap-6
+                 text-xl text-secondary md:mr-20
+                 md:flex-row md:items-center xl:mr-40 xl:gap-12
+                 "
     >
-      {/* {navigationLinks.map(({ label, href }) => (
-        <li key={href} className=" ">
-          <Link href={href}>{dictionary.navigation[label]}</Link>
+      {navigationLinks.map(({ label, href }) => (
+        <li key={href} className="w-full ">
+          <Link
+            href={href}
+            className="block w-full rounded-md border
+                      border-transparent py-2
+                      transition-colors duration-200
+                      md:px-4 md:hover:border-secondary
+                      md:active:border-accent md:active:text-accent"
+          >
+            {dictionary[label]}
+          </Link>
         </li>
-      ))} */}
-      <li>
-        <Link href="#services">{dictionary.services}</Link>
-      </li>
-      <li>
-        <Link href="#portfolio">{dictionary.portfolio}</Link>
-      </li>
-      <li>
-        <Link href="#contacs">{dictionary.contacts}</Link>
-      </li>
+      ))}
     </ul>
   );
 }

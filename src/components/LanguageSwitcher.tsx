@@ -19,8 +19,8 @@ export default function LanguageSwitcher() {
         return (
           <li
             key={locale}
-            className="relative mb-10 after:absolute after:right-0
-                        after:top-0 after:h-full after:w-0.5 after:bg-secondary md:mb-0
+            className="relative mb-10 after:absolute after:-right-px
+                        after:top-[12.5%] after:h-3/4 after:w-0.5 after:bg-secondary md:mb-0
                         [&:not(:first-child)]:pl-2 [&:not(:first-child)]:after:hidden
                         [&:not(:last-child)]:pr-2"
           >
