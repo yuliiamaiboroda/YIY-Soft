@@ -2,6 +2,7 @@ import Section from './Section';
 import Container from './Container';
 import Contacts from '@/components/Contacts';
 import ContactTitle from '@/components/ContactTitle';
+import ContactForm from '@/components/ContactForm';
 
 interface IProps {}
 
@@ -13,6 +14,7 @@ export default function ContactUsSection({}: IProps) {
           <ContactTitle>Contacts</ContactTitle>
           <Contacts />
           <ContactTitle>Write to us</ContactTitle>
+          <ContactForm />
         </div>
       </Container>
     </Section>
