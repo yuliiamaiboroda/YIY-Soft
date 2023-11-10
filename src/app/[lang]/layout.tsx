@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
+import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
 const montserat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -15,15 +17,22 @@ export const metadata: Metadata = {
     'Welcome to our YIY Soft – where innovation, expertise, and creativity unite to bring your digital dreams to life.',
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: 'uk' }, { lang: 'en' }];
+}
+
+export default async function RootLayout({
   children,
+  params: { lang },
 }: {
   children: React.ReactNode;
+  params: { lang: Locale };
 }) {
+  const dictionary = await getDictionary(lang);
   return (
-    <html lang="en">
-      <body className={`${montserat.className} flex flex-col min-h-screen`}>
-        <Header />
+    <html lang={lang}>
+      <body className={`${montserat.className} flex min-h-screen flex-col`}>
+        <Header dictionary={dictionary.navigation} />
         {children}
         <Footer />
       </body>

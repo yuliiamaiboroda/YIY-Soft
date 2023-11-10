@@ -1,22 +1,31 @@
+import Link from 'next/link';
 import Container from './Container';
 import MobileMenu from './MobileMenu';
 import Logo from '@/components/Logo';
 import Navigation from '@/components/Navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { INavigationDictionary } from '@/types/navigation';
 
-interface IProps {}
+interface IProps {
+  dictionary: INavigationDictionary;
+}
 
-export default function Header({}: IProps) {
+export default function Header({ dictionary }: IProps) {
   return (
-    <header className="fixed top-0 left-0 w-full bg-semiTransparent backdrop-blur-[2px]">
+    <header
+      className="fixed left-0 top-0 z-50 w-full items-center 
+                 bg-semiTransparent py-3 backdrop-blur-[2px]"
+    >
       <Container>
         <div className="flex">
-          <Logo />
-          <div className="hidden md:flex">
-            <Navigation />
+          <Link href="/" className="mr-auto">
+            <Logo />
+          </Link>
+          <div className="hidden md:flex md:items-center">
+            <Navigation dictionary={dictionary} />
             <LanguageSwitcher />
           </div>
-          <MobileMenu />
+          <MobileMenu dictionary={dictionary} />
         </div>
       </Container>
     </header>

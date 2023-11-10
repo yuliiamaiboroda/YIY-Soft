@@ -2,36 +2,42 @@
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Navigation from '@/components/Navigation';
+import { INavigationDictionary } from '@/types';
 
-interface IProps {}
+interface IProps {
+  dictionary: INavigationDictionary;
+}
 
-export default function MobileMenu({}: IProps) {
+export default function MobileMenu({ dictionary }: IProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
-      <button type="button" onClick={() => setIsMenuOpen(true)}>
-        <svg className="w-8">
+    <>
+      <button
+        type="button"
+        className="md:hidden"
+        onClick={() => setIsMenuOpen(true)}
+      >
+        <svg className="h-8 w-11">
           <use href="images/icons.svg#burger"></use>
         </svg>
       </button>
       <div
-        className={`fixed top-0 right-0 w-1/2 min-h-screen 
-                  bg-primary flex justify-between items-start
-                  px-4 py-5 ${
+        onClick={() => setIsMenuOpen(false)}
+        className={`fixed right-0 top-0  min-h-screen 
+                  min-w-[50%] bg-primary
+                  px-4 py-6 md:hidden ${
                     isMenuOpen ? '' : 'translate-x-full'
-                  } duration-200 transition-transform`}
+                  } transition-transform duration-200`}
       >
         <div>
           <LanguageSwitcher />
-          <Navigation />
+          <Navigation dictionary={dictionary} />
         </div>
-        <button type="button" onClick={() => setIsMenuOpen(false)}>
-          <svg className="w-6 h-6">
-            <use href="images/icons.svg#cross"></use>
-          </svg>
-        </button>
+        <svg className="pointer-events-none absolute right-6 top-6 h-6 w-6">
+          <use href="images/icons.svg#cross"></use>
+        </svg>
       </div>
-    </div>
+    </>
   );
 }

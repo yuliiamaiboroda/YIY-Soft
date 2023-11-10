@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "title": "Crafting Digital Success from Scratch",
+    "subtitle": "Tailored Website Solutions for Every Company's Unique Vision",
+    "button": "Order a website"
+  }
+}

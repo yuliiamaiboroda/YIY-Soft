@@ -2,7 +2,7 @@ interface IProps {}
 
 export default function Logo({}: IProps) {
   return (
-    <svg className="w-[116px] mr-auto">
+    <svg className=" h-[54px] w-[116px]">
       <use href="images/icons.svg#logo-lg"></use>
     </svg>
   );
