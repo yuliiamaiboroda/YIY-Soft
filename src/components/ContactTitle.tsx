@@ -3,5 +3,5 @@ interface IProps {
 }
 
 export default function ContactTitle({ children }: IProps) {
-  return <h3 className="text-24">{children}</h3>;
+  return <h3 className="mb-8 text-24">{children}</h3>;
 }

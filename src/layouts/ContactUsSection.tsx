@@ -10,10 +10,11 @@ export default function ContactUsSection({}: IProps) {
   return (
     <Section id="contacts">
       <Container>
-        <div className="bg-accent px-6 py-10 text-secondary">
-          <ContactTitle>Contacts</ContactTitle>
+        <div
+          className="flex flex-col gap-10 bg-accent
+                    px-6 py-10 text-secondary"
+        >
           <Contacts />
-          <ContactTitle>Write to us</ContactTitle>
           <ContactForm />
         </div>
       </Container>
