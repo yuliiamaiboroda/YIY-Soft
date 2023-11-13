@@ -28,7 +28,7 @@ export default async function HeroSection({lang}: IProps) {
               <div className="w-fit bg-accent text-20 font-medium md:text-24">
                 <Link href="#contacts" className="flex px-9 py-4 text-center">
                 {dictionary.hero?.button}
-                  <svg className="ml-2 h-6 w-6 self-center fill-secondary stroke-secondary">
+                  <svg className="ml-2 h-6 w-6 self-center fill-secondary stroke-[2.5] stroke-secondary">
                     <use href="images/icons.svg#link-arrow"></use>
                   </svg>
                 </Link>
