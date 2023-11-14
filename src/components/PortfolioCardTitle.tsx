@@ -17,7 +17,7 @@ export default function PortfolioCardTitle({
         isTabletScreen ? 'hidden md:flex lg:hidden' : 'flex md:hidden lg:flex '
       } relative mt-10 h-[162px] items-center border-y-[1px] border-primary md:mt-6 md:h-[192px] lg:mt-6 lg:h-[176px] xl:h-[200px]`}
     >
-      <h3 className="text-20 font-semibold ss:text-24 sm:text-28 md:text-32 lg:text-40">
+      <h3 className="font-semibold text-24 sm:text-28 md:text-32 lg:text-40">
         {children}
       </h3>
       <Link href={url} target="_blank" rel="noopener noreferrer">
