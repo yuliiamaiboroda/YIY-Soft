@@ -4,7 +4,7 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export default function ContactLink({ children, ...props }: IProps) {
   return (
-    <a {...props} className="flex break-all text-20 hover:underline">
+    <a {...props} className="flex break-all text-20 hover:underline xl:text-24">
       {children}
     </a>
   );

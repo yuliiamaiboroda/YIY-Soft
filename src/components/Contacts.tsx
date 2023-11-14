@@ -20,7 +20,7 @@ export default function Contacts({}: IProps) {
         {contacts.map(({ href, label, iconId }) => (
           <li key={href} className="[&:not(:last-child)]:mb-6">
             <ContactLink href={href}>
-              <svg className="mr-4 h-6 w-6">
+              <svg className="mr-4 h-6 w-6 xl:h-8 xl:w-8">
                 <use href={`images/icons.svg#${iconId}`}></use>
               </svg>
               {label.toLowerCase()}

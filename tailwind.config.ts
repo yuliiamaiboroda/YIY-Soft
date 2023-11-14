@@ -16,8 +16,9 @@ const config: Config = {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
+        'light-accent': 'var(--light-accent)',
         active: 'var(--active)',
-        semiTransparent: 'var(--semi-transparent)',
+        'semi-transparent': 'var(--semi-transparent)',
         placeholder: 'var(--placeholder)',
       },
       fontSize: {

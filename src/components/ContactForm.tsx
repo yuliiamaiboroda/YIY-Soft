@@ -20,7 +20,7 @@ export default function ContactForm({}: IProps) {
   const onSubmit: SubmitHandler<IInputs> = data => console.log(data);
 
   return (
-    <div>
+    <div className="xl:w-1/2">
       <ContactTitle>Write to us</ContactTitle>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -33,7 +33,7 @@ export default function ContactForm({}: IProps) {
           })}
           type="text"
           placeholder="Name"
-          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20"
+          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20 xl:text-24"
         />
         <p className="text-secondary">{errors.name?.message}</p>
         <input
@@ -46,7 +46,7 @@ export default function ContactForm({}: IProps) {
           })}
           type="email"
           placeholder="Email"
-          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20"
+          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20 xl:text-24"
         />
         <p className="text-secondary">{errors.email?.message}</p>
         <textarea
@@ -56,13 +56,16 @@ export default function ContactForm({}: IProps) {
             maxLength: { value: 200, message: 'Too long' },
           })}
           rows={5}
-          className="placeholder:text-placeholder mb-8 resize-none px-6 py-4  text-20"
+          className="placeholder:text-placeholder mb-8 resize-none px-6 py-4  text-20 xl:mb-10 xl:text-24"
           placeholder="Message"
         />
         <p className="text-secondary">{errors.message?.message}</p>
         <button
           type="submit"
-          className="rounded border-2 px-8 py-4 text-secondary"
+          className="hover:bg-light-accent rounded border-[3px] border-secondary px-8 py-4
+                    font-medium text-secondary
+                    transition-colors duration-200
+                    active:border-active active:text-active md:text-28"
         >
           Send
         </button>
