@@ -19,7 +19,7 @@ export default function Home({
       <BusinessSection />
       <FeatureSection />
       <BenefitsSection />
-      <PortfolioSection />
+      <PortfolioSection lang={lang} />
       <ClientSection />
       <ContactUsSection />
       <TechnologySection />
