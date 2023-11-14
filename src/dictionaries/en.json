@@ -8,5 +8,26 @@
     "title": "Crafting Digital Success from Scratch",
     "subtitle": "Tailored Website Solutions for Every Company's Unique Vision",
     "button": "Order a website"
+  },
+  "portfolio": {
+    "sectionTitle": "Portfolio",
+    "userPage": {
+      "title": "Ahrokhimpromtsentr",
+      "firstDescription": "The corporate website seamlessly integrates user-friendly navigation with visually engaging design, providing visitors with an immersive experience.",
+      "secondDescription": "Development process prioritized responsiveness and compatibility across devices, ensuring accessibility for a diverse audience.",
+      "url": "https://ahrokhimpromtsentr.vercel.app/"
+    },
+    "adminPage": {
+      "title": "Admin page",
+      "firstDescription": "This special platform has been carefully designed to manage a corporate site, from product presentation to employment management.",
+      "secondDescription": "Security is a top priority, so we implemented robust authentication protocols to safeguard sensitive corporate information.",
+      "url": "http://yuliiamaiboroda.github.io/admin-panel-agro/login"
+    },
+    "backend": {
+      "title": "Backend",
+      "firstDescription": "The backend project was meticulously developed to serve as the backbone of the application, handling data processing, logic, and ensuring functionality.",
+      "secondDescription": "Key features of the backend include a secure authentication system, robust data storage, and efficient API endpoints for communication with the frontend.",
+      "url": "https://ahrokhimpromtsentr.cyclic.app/api/docs/"
+    }
   }
 }
