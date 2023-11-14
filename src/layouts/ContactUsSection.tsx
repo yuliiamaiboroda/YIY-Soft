@@ -12,7 +12,7 @@ export default function ContactUsSection({}: IProps) {
       <Container>
         <div
           className="flex flex-col gap-10 bg-accent
-                    px-6 py-10 text-secondary"
+                    px-6 py-10 text-secondary md:gap-12 md:px-24 md:py-12"
         >
           <Contacts />
           <ContactForm />

@@ -33,7 +33,7 @@ export default function ContactForm({}: IProps) {
           })}
           type="text"
           placeholder="Name"
-          className="mb-6 px-6 py-4 text-20"
+          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20"
         />
         <p className="text-secondary">{errors.name?.message}</p>
         <input
@@ -46,7 +46,7 @@ export default function ContactForm({}: IProps) {
           })}
           type="email"
           placeholder="Email"
-          className="mb-6 px-6 py-4 text-20"
+          className="placeholder:text-placeholder mb-6 px-6 py-4 text-20"
         />
         <p className="text-secondary">{errors.email?.message}</p>
         <textarea
@@ -56,13 +56,13 @@ export default function ContactForm({}: IProps) {
             maxLength: { value: 200, message: 'Too long' },
           })}
           rows={5}
-          className="mb-8 resize-none px-6 py-4 text-20"
+          className="placeholder:text-placeholder mb-8 resize-none px-6 py-4  text-20"
           placeholder="Message"
         />
         <p className="text-secondary">{errors.message?.message}</p>
         <button
           type="submit"
-          className="rounded border-2 px-8 py-4 text-secondary "
+          className="rounded border-2 px-8 py-4 text-secondary"
         >
           Send
         </button>

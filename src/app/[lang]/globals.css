@@ -8,6 +8,7 @@
   --accent: #0016dc;
   --active: #000f93;
   --semi-transparent: rgba(0, 0, 0, 0.5);
+  --placeholder: #747aa4;
 }
 
 html {

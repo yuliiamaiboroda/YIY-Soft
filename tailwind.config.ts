@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        ss: '310px'
+        ss: '310px',
       },
       colors: {
         primary: 'var(--primary)',
@@ -18,6 +18,7 @@ const config: Config = {
         accent: 'var(--accent)',
         active: 'var(--active)',
         semiTransparent: 'var(--semi-transparent)',
+        placeholder: 'var(--placeholder)',
       },
       fontSize: {
         '12': ['12px', '1.2'],
