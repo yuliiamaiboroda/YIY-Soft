@@ -16,8 +16,12 @@ export default function ContactForm({}: IProps) {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<IInputs>();
-  const onSubmit: SubmitHandler<IInputs> = data => console.log(data);
+  const onSubmit: SubmitHandler<IInputs> = data => {
+    console.log(data);
+    reset();
+  };
 
   return (
     <div className="xl:w-1/2">
@@ -35,25 +39,25 @@ export default function ContactForm({}: IProps) {
             type="text"
             placeholder="Name"
             className={`${
-              errors.name?.message && 'border-red-400'
+              errors.name?.message ? 'border-red-400' : 'border-secondary'
             } placeholder:text-placeholder block w-full 
-            border-[3px] border-solid border-transparent
+            border-[3px] border-solid
             px-6 py-4 text-20 transition-colors
-            duration-200 xl:text-24`}
+            duration-200 xl:text-24  `}
           />
           <small
             className={`${
               errors.name?.message
                 ? 'opacity-1 translate-y-2'
                 : 'pointer-events-none -translate-y-2 opacity-0'
-            } absolute left-2 top-full max-w-[calc(100%-1rem)] 
-              bg-[rgba(0,0,0,0.85)] px-6 py-4
-          text-red-400 transition duration-200`}
+            } absolute left-2 top-full z-10 
+              max-w-[calc(100%-1rem)] bg-[rgba(0,5,50,0.85)] px-4
+          py-2 text-red-400 transition duration-200`}
           >
             {errors.name?.message}
           </small>
         </label>
-        <label className="mb-6">
+        <label className="relative mb-6">
           <input
             {...register('email', {
               required: { value: true, message: 'Required field' },
@@ -64,11 +68,26 @@ export default function ContactForm({}: IProps) {
             })}
             type="email"
             placeholder="Email"
-            className="placeholder:text-placeholder block w-full px-6 py-4 text-20 xl:text-24"
+            className={`${
+              errors.email?.message ? 'border-red-400' : 'border-secondary'
+            } placeholder:text-placeholder block w-full 
+            border-[3px] border-solid
+            px-6 py-4 text-20 transition-colors
+            duration-200 xl:text-24  `}
           />
-          <small className="text-secondary">{errors.email?.message}</small>
+          <small
+            className={`${
+              errors.email?.message
+                ? 'opacity-1 translate-y-2'
+                : 'pointer-events-none -translate-y-2 opacity-0'
+            } absolute left-2 top-full z-10 
+              max-w-[calc(100%-1rem)] bg-[rgba(0,5,50,0.85)] px-4
+          py-2 text-red-400 transition duration-200`}
+          >
+            {errors.email?.message}
+          </small>
         </label>
-        <label className="mb-8  xl:mb-10">
+        <label className="relative mb-8  xl:mb-10">
           <textarea
             {...register('message', {
               required: { value: true, message: 'Required field' },
@@ -76,17 +95,32 @@ export default function ContactForm({}: IProps) {
               maxLength: { value: 2000, message: 'Too long' },
             })}
             rows={5}
-            className="placeholder:text-placeholder block w-full resize-none px-6 py-4  text-20 xl:text-24"
             placeholder="Message"
+            className={`${
+              errors.message?.message ? 'border-red-400' : 'border-secondary'
+            } placeholder:text-placeholder block w-full 
+            resize-none border-[3px]
+            border-solid px-6 py-4 text-20
+            transition-colors duration-200 xl:text-24 `}
           />
-          <small className="text-secondary">{errors.message?.message}</small>
+          <small
+            className={`${
+              errors.message?.message
+                ? 'opacity-1 translate-y-2'
+                : 'pointer-events-none -translate-y-2 opacity-0'
+            } absolute left-2 top-full z-10 
+              max-w-[calc(100%-1rem)] bg-[rgba(0,5,50,0.85)] px-4
+          py-2 text-red-400 transition duration-200`}
+          >
+            {errors.message?.message}
+          </small>
         </label>
         <button
           type="submit"
           className="hover:bg-light-accent rounded border-[3px] border-secondary px-8 py-4
-                    font-medium text-secondary
-                    transition-colors duration-200
-                    active:border-active active:text-active md:text-28"
+                font-medium text-secondary
+                transition-colors duration-200
+                active:border-active active:text-active md:text-28"
         >
           Send
         </button>
