@@ -34,6 +34,9 @@ export function middleware(request: NextRequest) {
       // '/manifest.json',
       // '/favicon.ico',
       '/images/icons.svg',
+      '/images/portfolio/userPage.jpg',
+      '/images/portfolio/adminPage.jpg',
+      '/images/portfolio/backend.jpg',
       // Your other files in `public`
     ].includes(pathname)
   )
