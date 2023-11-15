@@ -16,7 +16,7 @@ export default function Home({
   return (
     <main>
       <HeroSection lang={lang} />
-      <BusinessSection />
+      <BusinessSection lang={lang} />
       <FeatureSection />
       <BenefitsSection />
       <PortfolioSection lang={lang} />

@@ -29,5 +29,71 @@
       "secondDescription": "Key features of the backend include a secure authentication system, robust data storage, and efficient API endpoints for communication with the frontend.",
       "url": "https://ahrokhimpromtsentr.cyclic.app/api/docs/"
     }
+  },
+  "businessProcess": {
+    "title": "Business Process",
+    "subtitle": "Empowering Your Business Growth with Cutting-Edge Solutions",
+    "sliders": {
+      "slide01": {
+        "number": "01",
+        "title": "Visualizing Your Goals",
+        "description": "Imagine what you want your website to achieve and share your ideas with us."
+      },
+      "slide02": {
+        "number": "02",
+        "title": "Claiming Your Name",
+        "description": "Pick a special web address (domain name) that's easy to remember."
+      },
+      "slide03": {
+        "number": "03",
+        "title": "Finding a Home Online",
+        "description": "We'll set up a secure space for your website to live (hosting service)."
+      },
+      "slide04": {
+        "number": "04",
+        "title": "Organizing Your Ideas",
+        "description": "We'll work with you to plan what each part of your website will look like."
+      },
+      "slide05": {
+        "number": "05",
+        "title": "Creating the Look",
+        "description": "Our designers will craft a beautiful design that matches your brand."
+      },
+      "slide06": {
+        "number": "06",
+        "title": "Making It Work",
+        "description": "Our tech team will build the actual website based on the design."
+      },
+      "slide07": {
+        "number": "07",
+        "title": "Adding Your Touch",
+        "description": "Share your content - words, pictures, and more - to make it truly yours."
+      },
+      "slide08": {
+        "number": "08",
+        "title": "Being Search-Friendly",
+        "description": "We'll help your website show up when people search online (search engine optimization)."
+      },
+      "slide09": {
+        "number": "09",
+        "title": "Checking Every Corner",
+        "description": "We'll make sure everything works perfectly before we show it to the world."
+      },
+      "slide10": {
+        "number": "10",
+        "title": "Launching with Flair",
+        "description": "Once it's all set, we'll help your website go live."
+      },
+      "slide11": {
+        "number": "11",
+        "title": "Telling Everyone",
+        "description": "Share your new website with friends, customers, and everyone you know."
+      },
+      "slide12": {
+        "number": "12",
+        "title": "Keeping it Fresh",
+        "description": "We'll help you update your website over time and make sure it stays awesome."
+      }
+    }
   }
 }
