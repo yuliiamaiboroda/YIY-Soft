@@ -1,4 +1,4 @@
-import SectionSubTitle from '@/components/SectionSubTitle';
+import SectionSubtitle from '@/components/SectionSubtitle';
 import SectionTitle from '@/components/SectionTitle';
 import SliderBusiness from '@/components/SliderBusiness';
 import Container from './Container';
@@ -17,9 +17,9 @@ export default async function BusinessSection({ lang }: IProps) {
     <Section>
       <Container>
         <SectionTitle>Business Process</SectionTitle>
-        <SectionSubTitle>
+        <SectionSubtitle>
           Empowering Your Business Growth with Cutting-Edge Solutions
-        </SectionSubTitle>
+        </SectionSubtitle>
         {/* Slider for mobile screens */}
         <div className="block md:hidden">
           <SliderBusiness

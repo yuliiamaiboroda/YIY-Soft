@@ -2,7 +2,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-export default function SectionSubTitle({ children, ...rest }: IProps) {
+export default function SectionSubtitle({ children, ...rest }: IProps) {
   return (
     <h3
       {...rest}
