@@ -13,7 +13,7 @@ export default async function PortfolioSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <Section>
+    <Section id="portfolio">
       <Container>
         <SectionTitle>{dictionary.portfolio.sectionTitle}</SectionTitle>
         <div className="flex flex-col items-center gap-10 md:items-stretch md:gap-12 lg:gap-[60px]">
