@@ -13,8 +13,8 @@ interface IProps {
 export default function Header({ dictionary }: IProps) {
   return (
     <header
-      className="fixed left-0 top-0 z-50 w-full items-center 
-                 bg-semiTransparent py-3 backdrop-blur-[2px]"
+      className="bg-semi-transparent fixed left-0 top-0 z-50 w-full 
+                 items-center py-3 backdrop-blur-[2px]"
     >
       <Container>
         <div className="flex">
