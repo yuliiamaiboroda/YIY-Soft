@@ -1,3 +1,5 @@
+import styles from './slick.module.css'
+
 export const sliderSettings = {
   dots: true,
   infinite: true,
@@ -5,6 +7,8 @@ export const sliderSettings = {
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,
+  arrows:false,
+  dotsClass: `slick-dots ${styles.dots}`,
   responsive: [
     {
       breakpoint: 1280,
