@@ -95,5 +95,36 @@
         "description": "We'll help you update your website over time and make sure it stays awesome."
       }
     }
+  },
+  "benefitsSection": {
+    "title": "Why people choose us",
+    "benefits": [
+      {
+        "title": "Expert Development",
+        "subtitle": "Crafting Interactive Realities",
+        "description": "Experience websites that breathe life into your ideas with our expert development team."
+      },
+      {
+        "title": "Reliable Hosting",
+        "subtitle": "Your Digital Home in Safe Hands",
+        "description": "Count on seamless access and top-tier security with our hosting solutions."
+      },
+      {
+        "title": "Artistic Design",
+        "subtitle": "Where Aesthetics Meet Functionality",
+        "description": "Elevate user experience with visually captivating designs that resonate."
+      },
+      {
+        "title": "Thorough Testing",
+        "subtitle": "Excellence in Every Click",
+        "description": "We leave no stone unturned to ensure impeccable performance and functionality."
+      }
+    ],
+    "counters": [
+      { "count": "04", "title": "Project" },
+      { "count": "06", "title": "Members" },
+      { "count": "12", "title": "Service" },
+      { "count": "02", "title": "Customers" }
+    ]
   }
 }

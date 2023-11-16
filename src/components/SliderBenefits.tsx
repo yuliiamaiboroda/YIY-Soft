@@ -5,18 +5,22 @@ import { benefitsSliderSettings } from '@/helpers/constants/benefits-slider-sett
 import BenefitCard from './BenefitCard';
 
 interface IProps {
-  data?: {
-    [key: string]: { number: string; title: string; description: string };
-  };
+  data: { title: string; subtitle: string; description: string }[];
 }
 
 export default function SliderBenefits({ data }: IProps) {
   const settings = benefitsSliderSettings;
 
   return (
-    <Slider {...settings} >
-      <BenefitCard />
-      <BenefitCard />
+    <Slider {...settings}>
+      {data.map(({ title, subtitle, description }, index) => (
+        <BenefitCard
+          key={index}
+          title={title}
+          subtitle={subtitle}
+          description={description}
+        />
+      ))}
     </Slider>
   );
 }

@@ -18,7 +18,7 @@ export default function Home({
       <HeroSection lang={lang} />
       <BusinessSection lang={lang} />
       <FeatureSection />
-      <BenefitsSection />
+      <BenefitsSection lang={lang} />
       <PortfolioSection lang={lang} />
       <ClientSection />
       <ContactUsSection />

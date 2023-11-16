@@ -1,15 +1,10 @@
 interface IProps {
-  data?: { title: string; subtitle: string; description: string };
+  title: string;
+  subtitle: string;
+  description: string;
 }
 
-export default function BenefitCard({ data }: IProps) {
-  //   const { title, subtitle, description } = data;
-
-  const title = 'Expert Development';
-  const subtitle = 'Crafting Interactive Realities';
-  const description =
-    'Experience websites that breathe life into your ideas with our expert development team.';
-    
+export default function BenefitCard({ title, subtitle, description }: IProps) {
   return (
     <div>
       <h3 className="mb-2 text-18 text-placeholder md:text-20">{title}</h3>
