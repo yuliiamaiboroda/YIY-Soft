@@ -1,13 +1,9 @@
 'use client';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { IContactFormData } from '@/types';
 import ContactTitle from './ContactTitle';
-
-interface IInputs {
-  name: string;
-  email: string;
-  message: string;
-}
+import { sendMail } from '@/utils';
 
 interface IProps {}
 
@@ -17,9 +13,10 @@ export default function ContactForm({}: IProps) {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<IInputs>();
-  const onSubmit: SubmitHandler<IInputs> = data => {
-    console.log(data);
+  } = useForm<IContactFormData>();
+
+  const onSubmit: SubmitHandler<IContactFormData> = data => {
+    sendMail(data);
     reset();
   };
 
@@ -40,10 +37,10 @@ export default function ContactForm({}: IProps) {
             placeholder="Name"
             className={`${
               errors.name?.message ? 'border-red-400' : 'border-secondary'
-            } placeholder:text-placeholder block w-full 
-            border-[3px] border-solid
-            px-6 py-4 text-20 transition-colors
-            duration-200 xl:text-24  `}
+            } block w-full border-[3px] 
+            border-solid px-6
+            py-4 text-20 transition-colors duration-200
+            placeholder:text-placeholder xl:text-24  `}
           />
           <small
             className={`${
@@ -70,10 +67,10 @@ export default function ContactForm({}: IProps) {
             placeholder="Email"
             className={`${
               errors.email?.message ? 'border-red-400' : 'border-secondary'
-            } placeholder:text-placeholder block w-full 
-            border-[3px] border-solid
-            px-6 py-4 text-20 transition-colors
-            duration-200 xl:text-24  `}
+            } block w-full border-[3px] 
+            border-solid px-6
+            py-4 text-20 transition-colors duration-200
+            placeholder:text-placeholder xl:text-24  `}
           />
           <small
             className={`${
@@ -98,10 +95,10 @@ export default function ContactForm({}: IProps) {
             placeholder="Message"
             className={`${
               errors.message?.message ? 'border-red-400' : 'border-secondary'
-            } placeholder:text-placeholder block w-full 
-            resize-none border-[3px]
-            border-solid px-6 py-4 text-20
-            transition-colors duration-200 xl:text-24 `}
+            } block w-full resize-none 
+            border-[3px] border-solid
+            px-6 py-4 text-20 transition-colors
+            duration-200 placeholder:text-placeholder xl:text-24 `}
           />
           <small
             className={`${
@@ -117,9 +114,9 @@ export default function ContactForm({}: IProps) {
         </label>
         <button
           type="submit"
-          className="hover:bg-light-accent rounded border-[3px] border-secondary px-8 py-4
-                font-medium text-secondary
-                transition-colors duration-200
+          className="rounded border-[3px] border-secondary px-8 py-4 font-medium
+                text-secondary transition-colors
+                duration-200 hover:bg-light-accent
                 active:border-active active:text-active md:text-28"
         >
           Send
