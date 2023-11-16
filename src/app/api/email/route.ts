@@ -28,10 +28,11 @@ export async function POST(request: NextRequest) {
   const orderNumber = `${date}.${time}`;
 
   const orderTemplate = `
-  Order nubmer: ${orderNumber}
-  Name: ${name}
-  Email: ${email}
-  Message: ${message}`;
+Order nubmer: ${orderNumber}
+Name: ${name}
+Email: ${email}
+Message:
+${message}`;
 
   const mailOption: Mail.Options = {
     from: NODE_SENDER_EMAIL,
