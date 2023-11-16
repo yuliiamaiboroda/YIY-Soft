@@ -6,6 +6,9 @@ import Footer from '@/layouts/Footer';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const montserat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700'],

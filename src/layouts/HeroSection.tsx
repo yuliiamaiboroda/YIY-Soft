@@ -25,10 +25,10 @@ export default async function HeroSection({lang}: IProps) {
               <h2 className="mb-10 max-w-[400px] text-24 md:mb-14 md:max-w-[500px] md:text-28 lg:max-w-[610px] lg:text-32">
               {dictionary.hero?.subtitle}
               </h2>
-              <div className="w-fit bg-accent text-20 font-medium md:text-24">
+              <div className="w-fit bg-accent text-20 font-medium md:text-24 duration-500 ease-in-out hover:scale-90 hover:skew-y-1">
                 <Link href="#contacts" className="flex px-9 py-4 text-center">
                 {dictionary.hero?.button}
-                  <svg className="ml-2 h-6 w-6 self-center fill-secondary stroke-[2.5] stroke-secondary">
+                  <svg className="ml-2 h-6 w-6 self-center fill-secondary stroke-[2.5] stroke-secondary ">
                     <use href="images/icons.svg#link-arrow"></use>
                   </svg>
                 </Link>
