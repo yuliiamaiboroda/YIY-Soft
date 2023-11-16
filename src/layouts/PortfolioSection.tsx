@@ -1,7 +1,7 @@
 import PortfolioCard from '@/components/PortfolioCard';
 import Container from '@/layouts/Container';
 import Section from './Section';
-import SectionHeader from '../components/SectionHeader';
+import SectionTitle from '@/components/SectionTitle';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
@@ -13,9 +13,9 @@ export default async function PortfolioSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <Section>
+    <Section id="portfolio">
       <Container>
-        <SectionHeader>{dictionary.portfolio.sectionTitle}</SectionHeader>
+        <SectionTitle>{dictionary.portfolio.sectionTitle}</SectionTitle>
         <div className="flex flex-col items-center gap-10 md:items-stretch md:gap-12 lg:gap-[60px]">
           <PortfolioCard
             imageUrl="/images/portfolio/userPage.jpg"
