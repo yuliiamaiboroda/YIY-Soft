@@ -2,7 +2,7 @@ import ContactLink from './ContactLink';
 import ContactTitle from './ContactTitle';
 
 const contacts = [
-  { href: 'tel:+380739187496', label: '+380739187496', iconId: 'phone' },
+  { href: 'tel:+380739187496', label: '+38 (073) 918 74 96', iconId: 'phone' },
   {
     href: 'mailto:YIY.Soft@gmail.com',
     label: 'yiy.soft@gmail.com',
