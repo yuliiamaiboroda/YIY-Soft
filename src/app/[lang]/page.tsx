@@ -6,7 +6,6 @@ import BenefitsSection from '@/layouts/BenefitsSection';
 import PortfolioSection from '@/layouts/PortfolioSection';
 import ClientSection from '@/layouts/ClientSection';
 import ContactUsSection from '@/layouts/ContactUsSection';
-import TechnologySection from '@/layouts/TechnologySection';
 
 export default function Home({
   params: { lang },
@@ -20,9 +19,8 @@ export default function Home({
       <FeatureSection />
       <BenefitsSection lang={lang} />
       <PortfolioSection lang={lang} />
-      <ClientSection />
+      <ClientSection lang={lang} />
       <ContactUsSection />
-      <TechnologySection />
     </main>
   );
 }

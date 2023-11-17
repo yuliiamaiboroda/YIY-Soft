@@ -11,24 +11,25 @@ interface IProps {
 
 export default async function PortfolioSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
-
+  const { sectionTitle, userPage, adminPage, backend } = dictionary.portfolio;
+  
   return (
     <Section id="portfolio">
       <Container>
-        <SectionTitle>{dictionary.portfolio.sectionTitle}</SectionTitle>
+        <SectionTitle>{sectionTitle}</SectionTitle>
         <div className="flex flex-col items-center gap-10 md:items-stretch md:gap-12 lg:gap-[60px]">
           <PortfolioCard
             imageUrl="/images/portfolio/userPage.jpg"
-            data={dictionary.portfolio.userPage}
+            data={userPage}
           />
           <PortfolioCard
             imageUrl="/images/portfolio/adminPage.jpg"
-            data={dictionary.portfolio.adminPage}
+            data={adminPage}
             changeFlexDirection={true}
           />
           <PortfolioCard
             imageUrl="/images/portfolio/backend.jpg"
-            data={dictionary.portfolio.backend}
+            data={backend}
           />
         </div>
       </Container>
