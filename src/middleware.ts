@@ -37,6 +37,7 @@ export function middleware(request: NextRequest) {
       '/images/portfolio/userPage.jpg',
       '/images/portfolio/adminPage.jpg',
       '/images/portfolio/backend.jpg',
+      '/images/clients/portrait_placeholder.jpg',
       // Your other files in `public`
     ].includes(pathname)
   )
