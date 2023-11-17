@@ -12,24 +12,20 @@ interface IProps {
 
 export default async function BusinessSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
-
+  const { title, subtitle, sliders } = dictionary.businessProcess;
+  
   return (
     <Section>
       <Container>
-        <SectionTitle>Business Process</SectionTitle>
-        <SectionSubtitle>
-          Empowering Your Business Growth with Cutting-Edge Solutions
-        </SectionSubtitle>
+        <SectionTitle>{title}</SectionTitle>
+        <SectionSubtitle>{subtitle}</SectionSubtitle>
         {/* Slider for mobile screens */}
         <div className="block md:hidden">
-          <SliderBusiness
-            isMobile={true}
-            data={dictionary.businessProcess.sliders}
-          />
+          <SliderBusiness isMobile={true} data={sliders} />
         </div>
         {/* Slider for tablet&desktop screens */}
         <div className="hidden md:block">
-          <SliderBusiness data={dictionary.businessProcess.sliders} />
+          <SliderBusiness data={sliders} />
         </div>
       </Container>
     </Section>
