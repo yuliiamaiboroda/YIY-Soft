@@ -12,7 +12,7 @@ export default function SliderBenefits({ data }: IProps) {
   const settings = benefitsSliderSettings;
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} autoplay={true} autoplaySpeed={4000}>
       {data.map(({ title, subtitle, description }, index) => (
         <BenefitCard
           key={index}
