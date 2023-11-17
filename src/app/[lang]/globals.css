@@ -20,3 +20,14 @@ body {
   color: var(--primary);
   background: var(--secondary);
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--primary);
+  background: yellow;
+}
+
+::selection {
+  color: var(--primary);
+  background: yellow;
+}

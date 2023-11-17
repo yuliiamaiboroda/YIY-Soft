@@ -8,4 +8,6 @@
 
 ul.dots {
   bottom: -36px !important;
+  left: -10px !important;
+  text-align: start !important;
 }
