@@ -1,12 +1,14 @@
 import Section from './Section';
 import Container from './Container';
 import Contacts from '@/components/Contacts';
-import ContactTitle from '@/components/ContactTitle';
 import ContactForm from '@/components/ContactForm';
+import { IContactsDictionary } from '@/types/contactsDictionary';
 
-interface IProps {}
+interface IProps {
+  dictionary: IContactsDictionary;
+}
 
-export default function ContactUsSection({}: IProps) {
+export default function ContactUsSection({ dictionary }: IProps) {
   return (
     <Section id="contacts">
       <Container>
@@ -17,8 +19,8 @@ export default function ContactUsSection({}: IProps) {
                     xl:flex-row xl:justify-between xl:px-28
                     xl:py-16"
         >
-          <Contacts />
-          <ContactForm />
+          <Contacts dictionary={dictionary.contacts} />
+          <ContactForm dictionary={dictionary.contactForm} />
         </div>
       </Container>
     </Section>
