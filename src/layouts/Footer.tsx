@@ -1,9 +1,17 @@
 import Link from 'next/link';
 import Container from './Container';
 
-interface IProps {}
+interface IProps {
+  dictionary: {
+    copyright: string;
+    designerSign: string;
+    designerName: string;
+  };
+}
 
-export default function Footer({}: IProps) {
+export default function Footer({ dictionary }: IProps) {
+  const { copyright, designerSign, designerName } = dictionary;
+
   return (
     <footer className="bg-primary pb-5 pt-10 md:pb-6">
       <Container>
@@ -20,19 +28,19 @@ export default function Footer({}: IProps) {
             </svg>
           </Link>
           <div className="flex w-fit gap-1 text-16 text-secondary md:text-18">
-            <p>Designed by</p>
+            <p>{designerSign}</p>
             <a
               href="https://www.linkedin.com/in/yelizavetatkachenko/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              Yelizaveta Tkachenko
+              {designerName}
             </a>
           </div>
         </div>
         <p className="mx-auto w-fit text-12 text-secondary md:text-16">
-          © 2023 All rights reserved.
+          © 2023 {copyright}
         </p>
       </Container>
     </footer>
