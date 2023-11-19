@@ -96,6 +96,32 @@
       }
     }
   },
+  "professionalFeature": {
+    "title": "Professional Feature",
+    "subtitle": "Elegantly User-Friendly: Seamlessly Blending Beauty and Professionalism",
+    "cards": [
+      {
+        "iconId": "design",
+        "title": "Design",
+        "description": "Designing Tomorrow, Today: Creating Aesthetically Captivating Digital Experiences"
+      },
+      {
+        "iconId": "development",
+        "title": "Development",
+        "description": "Crafting Digital Dreams: Transforming Ideas into Interactive Realities"
+      },
+      {
+        "iconId": "testing",
+        "title": "Testing",
+        "description": "Pristine Performance: Pioneering Excellence Through Rigorous Testing"
+      },
+      {
+        "iconId": "hosting",
+        "title": "Hosting",
+        "description": "Beyond Digital Shelter: Hosting Solutions That Embrace Your Online Ambitions"
+      }
+    ]
+  },
   "benefitsSection": {
     "title": "Why people choose us",
     "benefits": [
