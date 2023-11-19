@@ -2,7 +2,6 @@ import SectionSubtitle from '@/components/SectionSubtitle';
 import SectionTitle from '@/components/SectionTitle';
 import SliderBusiness from '@/components/SliderBusiness';
 import Container from './Container';
-import Section from './Section';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
@@ -13,9 +12,12 @@ interface IProps {
 export default async function BusinessSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
   const { title, subtitle, sliders } = dictionary.businessProcess;
-  
+
   return (
-    <Section>
+    <section
+      className="pb-[50px] pt-[100px] md:pb-[60px] md:pt-[120px]
+                lg:pb-[70px] lg:pt-[140px] xl:pb-20 xl:pt-40"
+    >
       <Container>
         <SectionTitle>{title}</SectionTitle>
         <SectionSubtitle>{subtitle}</SectionSubtitle>
@@ -28,6 +30,6 @@ export default async function BusinessSection({ lang }: IProps) {
           <SliderBusiness data={sliders} />
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }
