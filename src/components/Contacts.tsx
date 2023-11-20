@@ -1,5 +1,6 @@
 import ContactLink from './ContactLink';
 import ContactTitle from './ContactTitle';
+import { IContactsDictionary } from '@/types';
 
 const contacts = [
   { href: 'tel:+380739187496', label: '+38 (073) 918 74 96', iconId: 'phone' },
@@ -10,12 +11,14 @@ const contacts = [
   },
 ];
 
-interface IProps {}
+interface IProps {
+  dictionary: IContactsDictionary['contacts'];
+}
 
-export default function Contacts({}: IProps) {
+export default function Contacts({ dictionary }: IProps) {
   return (
     <div>
-      <ContactTitle>Contacts</ContactTitle>
+      <ContactTitle>{dictionary.title}</ContactTitle>
       <ul>
         {contacts.map(({ href, label, iconId }) => (
           <li key={href} className="[&:not(:last-child)]:mb-6">

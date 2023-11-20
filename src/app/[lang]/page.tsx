@@ -1,4 +1,5 @@
 import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 import HeroSection from '@/layouts/HeroSection';
 import BusinessSection from '@/layouts/BusinessSection';
 import FeatureSection from '@/layouts/FeatureSection';
@@ -7,11 +8,12 @@ import PortfolioSection from '@/layouts/PortfolioSection';
 import ClientSection from '@/layouts/ClientSection';
 import ContactUsSection from '@/layouts/ContactUsSection';
 
-export default function Home({
+export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
+  const dicitonary = await getDictionary(lang);
   return (
     <main>
       <HeroSection lang={lang} />
@@ -20,7 +22,7 @@ export default function Home({
       <BenefitsSection lang={lang} />
       <PortfolioSection lang={lang} />
       <ClientSection lang={lang} />
-      <ContactUsSection />
+      <ContactUsSection dictionary={dicitonary.contactsSection} />
     </main>
   );
 }

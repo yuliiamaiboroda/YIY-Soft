@@ -1,13 +1,15 @@
 'use client';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { IContactFormData } from '@/types';
+import { IContactFormData, IContactsDictionary } from '@/types';
 import ContactTitle from './ContactTitle';
 import { sendMail } from '@/utils';
 
-interface IProps {}
+interface IProps {
+  dictionary: IContactsDictionary['contactForm'];
+}
 
-export default function ContactForm({}: IProps) {
+export default function ContactForm({ dictionary }: IProps) {
   const {
     register,
     handleSubmit,
@@ -20,9 +22,12 @@ export default function ContactForm({}: IProps) {
     reset();
   };
 
+  const { title, nameField, emailField, messageField, submitButton } =
+    dictionary;
+
   return (
     <div className="xl:w-1/2">
-      <ContactTitle>Write to us</ContactTitle>
+      <ContactTitle>{title}</ContactTitle>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col text-primary"
@@ -30,11 +35,11 @@ export default function ContactForm({}: IProps) {
         <label className="relative mb-6">
           <input
             {...register('name', {
-              required: { value: true, message: 'Required field' },
-              minLength: { value: 4, message: 'Too short' },
+              required: { value: true, message: nameField.required },
+              minLength: { value: 4, message: nameField.minLength },
             })}
             type="text"
-            placeholder="Name"
+            placeholder={nameField.placeholder}
             className={`${
               errors.name?.message ? 'border-red-400' : 'border-secondary'
             } block w-full border-[3px] 
@@ -57,14 +62,14 @@ export default function ContactForm({}: IProps) {
         <label className="relative mb-6">
           <input
             {...register('email', {
-              required: { value: true, message: 'Required field' },
+              required: { value: true, message: emailField.required },
               pattern: {
                 value: /\S+@\S+\.\S+/,
-                message: 'Invalid email address',
+                message: emailField.pattern,
               },
             })}
             type="email"
-            placeholder="Email"
+            placeholder={emailField.placeholder}
             className={`${
               errors.email?.message ? 'border-red-400' : 'border-secondary'
             } block w-full border-[3px] 
@@ -87,12 +92,12 @@ export default function ContactForm({}: IProps) {
         <label className="relative mb-8  xl:mb-10">
           <textarea
             {...register('message', {
-              required: { value: true, message: 'Required field' },
-              minLength: { value: 10, message: 'Too short' },
-              maxLength: { value: 2000, message: 'Too long' },
+              required: { value: true, message: messageField.required },
+              minLength: { value: 10, message: messageField.minLength },
+              maxLength: { value: 2000, message: messageField.maxLength },
             })}
             rows={5}
-            placeholder="Message"
+            placeholder={messageField.placeholder}
             className={`${
               errors.message?.message ? 'border-red-400' : 'border-secondary'
             } block w-full resize-none 
@@ -119,7 +124,7 @@ export default function ContactForm({}: IProps) {
                 duration-200 hover:bg-light-accent
                 active:border-active active:text-active md:text-28"
         >
-          Send
+          {submitButton}
         </button>
       </form>
     </div>

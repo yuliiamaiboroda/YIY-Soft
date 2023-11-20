@@ -165,5 +165,30 @@
         "review": "Thanks to the great team for their efforts in bringing this project to  fruition. Their ability to adapt to evolving requirements and implement changes seamlessly speaks volumes about their flexibility and expertise.  In summary, the development team has not only demonstrated their technical proficiency but also an achieving goals set."
       }
     ]
+  },
+  "contactsSection": {
+    "contacts": {
+      "title": "Contacts"
+    },
+    "contactForm": {
+      "title": "Write to us",
+      "nameField": {
+        "placeholder": "Name",
+        "required": "Name is required field",
+        "minLength": "Name must be at least 4 characters long"
+      },
+      "emailField": {
+        "placeholder": "Email",
+        "required": "Email is required field",
+        "pattern": "Invalid email address"
+      },
+      "messageField": {
+        "placeholder": "Message",
+        "required": "Message is required field",
+        "minLength": "Message must be at least 10 characters long",
+        "maxLength": "Message must be at most 2000 characters long"
+      },
+      "submitButton": "Send"
+    }
   }
 }
