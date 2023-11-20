@@ -188,7 +188,11 @@
         "minLength": "Message must be at least 10 characters long",
         "maxLength": "Message must be at most 2000 characters long"
       },
-      "submitButton": "Send"
+      "submitButton": "Send",
+      "notification": {
+        "success": "Thank you for your message!",
+        "error": "Something went wrong. Please try again later."
+      }
     }
   },
   "footer": {

@@ -21,5 +21,9 @@ export interface IContactsDictionary {
       maxLength: string;
     };
     submitButton: string;
+    notification: {
+      success: string;
+      error: string;
+    };
   };
 }
