@@ -16,6 +16,7 @@ export default function MobileMenu({ dictionary }: IProps) {
       <button
         type="button"
         className="md:hidden"
+        aria-label='burger menu'
         onClick={() => setIsMenuOpen(true)}
       >
         <svg className="h-8 w-11">

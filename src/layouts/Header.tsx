@@ -13,12 +13,12 @@ interface IProps {
 export default function Header({ dictionary }: IProps) {
   return (
     <header
-      className="bg-semi-transparent fixed left-0 top-0 z-50 w-full 
-                 items-center py-3 backdrop-blur-[2px]"
+      className="fixed left-0 top-0 z-50 w-full items-center 
+                 bg-semi-transparent py-3 backdrop-blur-[2px]"
     >
       <Container>
         <div className="flex">
-          <Link href="/" className="mr-auto">
+          <Link href="/" className="mr-auto" aria-label="Link to Home">
             <Logo />
           </Link>
           <div className="hidden md:flex md:items-center">

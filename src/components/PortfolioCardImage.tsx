@@ -12,6 +12,7 @@ export default function PortfolioCardImage({ imageUrl, url }: IProps) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Link to ${url}`}
       className="relative block h-full max-w-[382px] shrink-0 overflow-hidden rounded border-[1px] border-gray-200 grayscale duration-700 ease-in-out hover:cursor-pointer hover:grayscale-0 md:max-w-[336px] lg:max-w-[400px]"
     >
       <Image
