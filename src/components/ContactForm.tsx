@@ -1,9 +1,9 @@
 'use client';
 
+import { Notify } from 'notiflix';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { IContactFormData, IContactsDictionary } from '@/types';
 import ContactTitle from './ContactTitle';
-import { sendMail } from '@/utils';
 
 interface IProps {
   dictionary: IContactsDictionary['contactForm'];
@@ -16,14 +16,36 @@ export default function ContactForm({ dictionary }: IProps) {
     formState: { errors },
     reset,
   } = useForm<IContactFormData>();
+  const {
+    title,
+    nameField,
+    emailField,
+    messageField,
+    submitButton,
+    notification,
+  } = dictionary;
 
   const onSubmit: SubmitHandler<IContactFormData> = data => {
-    sendMail(data);
-    reset();
-  };
+    const apiEndpoint = 'api/email';
 
-  const { title, nameField, emailField, messageField, submitButton } =
-    dictionary;
+    fetch(apiEndpoint, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        return res;
+      })
+      .then(() => {
+        Notify.success(notification.success);
+        reset();
+      })
+      .catch(err => {
+        Notify.failure(notification.error);
+      });
+  };
 
   return (
     <div className="xl:w-1/2">
@@ -119,6 +141,7 @@ export default function ContactForm({ dictionary }: IProps) {
         </label>
         <button
           type="submit"
+          aria-label="Send the form"
           className="rounded border-[3px] border-secondary px-8 py-4 font-medium
                 text-secondary transition-colors
                 duration-200 hover:bg-light-accent

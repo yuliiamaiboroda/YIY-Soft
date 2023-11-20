@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
   const orderNumber = `${date}.${time}`;
 
   const orderTemplate = `
-Order nubmer: ${orderNumber}
+Order number: ${orderNumber}
 Name: ${name}
 Email: ${email}
 Message:
