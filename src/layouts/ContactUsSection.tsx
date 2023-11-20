@@ -1,4 +1,3 @@
-import Section from './Section';
 import Container from './Container';
 import Contacts from '@/components/Contacts';
 import ContactForm from '@/components/ContactForm';
@@ -10,7 +9,11 @@ interface IProps {
 
 export default function ContactUsSection({ dictionary }: IProps) {
   return (
-    <Section id="contacts">
+    <section
+      id="contacts"
+      className="pb-[100px] pt-[50px] md:pb-[120px] md:pt-[60px]
+                lg:pb-[140px] lg:pt-[70px] xl:pb-40 xl:pt-20"
+    >
       <Container>
         <div
           className="flex flex-col gap-10 bg-accent
@@ -23,6 +26,6 @@ export default function ContactUsSection({ dictionary }: IProps) {
           <ContactForm dictionary={dictionary.contactForm} />
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }

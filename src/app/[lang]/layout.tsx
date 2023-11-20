@@ -37,7 +37,7 @@ export default async function RootLayout({
       <body className={`${montserat.className} flex min-h-screen flex-col`}>
         <Header dictionary={dictionary.navigation} />
         {children}
-        <Footer />
+        <Footer dictionary={dictionary.footer} />
       </body>
     </html>
   );

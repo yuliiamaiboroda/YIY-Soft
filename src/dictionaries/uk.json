@@ -190,5 +190,10 @@
       },
       "submitButton": "Надіслати"
     }
+  },
+  "footer": {
+    "copyright": "Всі права захищені",
+    "designerSign": "Дизайнер",
+    "designerName": "Єлизавета Ткаченко"
   }
 }
