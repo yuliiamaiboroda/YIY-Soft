@@ -6,6 +6,9 @@ import Footer from '@/layouts/Footer';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const montserat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700'],
@@ -34,7 +37,7 @@ export default async function RootLayout({
       <body className={`${montserat.className} flex min-h-screen flex-col`}>
         <Header dictionary={dictionary.navigation} />
         {children}
-        <Footer />
+        <Footer dictionary={dictionary.footer} />
       </body>
     </html>
   );

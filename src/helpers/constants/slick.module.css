@@ -1,0 +1,11 @@
+/* Dots */
+
+.dots button::before {
+  top: 50;
+  color: var(--accent) !important;
+  font-size: 10px !important;
+}
+
+ul.dots {
+  bottom: -36px !important;
+}

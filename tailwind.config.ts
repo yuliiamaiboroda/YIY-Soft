@@ -9,15 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: {
-        ss: '310px'
-      },
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
+        'light-accent': 'var(--light-accent)',
         active: 'var(--active)',
-        semiTransparent: 'var(--semi-transparent)',
+        'semi-transparent': 'var(--semi-transparent)',
+        placeholder: 'var(--placeholder)',
       },
       fontSize: {
         '12': ['12px', '1.2'],

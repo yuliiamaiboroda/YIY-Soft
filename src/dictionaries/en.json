@@ -29,5 +29,171 @@
       "secondDescription": "Key features of the backend include a secure authentication system, robust data storage, and efficient API endpoints for communication with the frontend.",
       "url": "https://ahrokhimpromtsentr.cyclic.app/api/docs/"
     }
+  },
+  "businessProcess": {
+    "title": "Business Process",
+    "subtitle": "Empowering Your Business Growth with Cutting-Edge Solutions",
+    "sliders": {
+      "slide01": {
+        "number": "01",
+        "title": "Visualizing Your Goals",
+        "description": "Imagine what you want your website to achieve and share your ideas with us."
+      },
+      "slide02": {
+        "number": "02",
+        "title": "Claiming Your Name",
+        "description": "Pick a special web address (domain name) that's easy to remember."
+      },
+      "slide03": {
+        "number": "03",
+        "title": "Finding a Home Online",
+        "description": "We'll set up a secure space for your website to live (hosting service)."
+      },
+      "slide04": {
+        "number": "04",
+        "title": "Organizing Your Ideas",
+        "description": "We'll work with you to plan what each part of your website will look like."
+      },
+      "slide05": {
+        "number": "05",
+        "title": "Creating the Look",
+        "description": "Our designers will craft a beautiful design that matches your brand."
+      },
+      "slide06": {
+        "number": "06",
+        "title": "Making It Work",
+        "description": "Our tech team will build the actual website based on the design."
+      },
+      "slide07": {
+        "number": "07",
+        "title": "Adding Your Touch",
+        "description": "Share your content - words, pictures, and more - to make it truly yours."
+      },
+      "slide08": {
+        "number": "08",
+        "title": "Being Search-Friendly",
+        "description": "We'll help your website show up when people search online (search engine optimization)."
+      },
+      "slide09": {
+        "number": "09",
+        "title": "Checking Every Corner",
+        "description": "We'll make sure everything works perfectly before we show it to the world."
+      },
+      "slide10": {
+        "number": "10",
+        "title": "Server Deployment",
+        "description": "Once it's all set, we'll help your website go live."
+      },
+      "slide11": {
+        "number": "11",
+        "title": "Telling Everyone",
+        "description": "Share your new website with friends, customers, and everyone you know."
+      },
+      "slide12": {
+        "number": "12",
+        "title": "Keeping it Fresh",
+        "description": "We'll help you update your website over time and make sure it stays awesome."
+      }
+    }
+  },
+  "professionalFeature": {
+    "title": "Professional Feature",
+    "subtitle": "Elegantly User-Friendly: Seamlessly Blending Beauty and Professionalism",
+    "cards": [
+      {
+        "iconId": "design",
+        "title": "Design",
+        "description": "Designing Tomorrow, Today: Creating Aesthetically Captivating Digital Experiences"
+      },
+      {
+        "iconId": "development",
+        "title": "Development",
+        "description": "Crafting Digital Dreams: Transforming Ideas into Interactive Realities"
+      },
+      {
+        "iconId": "testing",
+        "title": "Testing",
+        "description": "Pristine Performance: Pioneering Excellence Through Rigorous Testing"
+      },
+      {
+        "iconId": "hosting",
+        "title": "Hosting",
+        "description": "Beyond Digital Shelter: Hosting Solutions That Embrace Your Online Ambitions"
+      }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Why people choose us",
+    "benefits": [
+      {
+        "title": "Expert Development",
+        "subtitle": "Crafting Interactive Realities",
+        "description": "Experience websites that breathe life into your ideas with our expert development team."
+      },
+      {
+        "title": "Reliable Hosting",
+        "subtitle": "Your Digital Home in Safe Hands",
+        "description": "Count on seamless access and top-tier security with our hosting solutions."
+      },
+      {
+        "title": "Artistic Design",
+        "subtitle": "Where Aesthetics Meet Functionality",
+        "description": "Elevate user experience with visually captivating designs that resonate."
+      },
+      {
+        "title": "Thorough Testing",
+        "subtitle": "Excellence in Every Click",
+        "description": "We leave no stone unturned to ensure impeccable performance and functionality."
+      }
+    ],
+    "counters": [
+      { "count": "04", "title": "Project" },
+      { "count": "06", "title": "Members" },
+      { "count": "12", "title": "Service" },
+      { "count": "02", "title": "Customers" }
+    ]
+  },
+  "clientSection": {
+    "title": "Reviews",
+    "reviews": [
+      {
+        "name": "Yuliia",
+        "review": "The development team behind this project has truly outdone themselves with their exceptional work. The level of collaboration and synergy among team members is evident in the seamless integration of functionalities. Their commitment to delivering a high-quality product is commendable, as every aspect of the development process reflects a meticulous attention to detail. The effective communication and agile approach have not only accelerated the project timeline but also ensured that my expectations were exceeded."
+      },
+      {
+        "name": "Dmytro",
+        "review": "Thanks to the great team for their efforts in bringing this project to  fruition. Their ability to adapt to evolving requirements and implement changes seamlessly speaks volumes about their flexibility and expertise.  In summary, the development team has not only demonstrated their technical proficiency but also an achieving goals set."
+      }
+    ]
+  },
+  "contactsSection": {
+    "contacts": {
+      "title": "Contacts"
+    },
+    "contactForm": {
+      "title": "Write to us",
+      "nameField": {
+        "placeholder": "Name",
+        "required": "Name is required field",
+        "minLength": "Name must be at least 4 characters long"
+      },
+      "emailField": {
+        "placeholder": "Email",
+        "required": "Email is required field",
+        "pattern": "Invalid email address"
+      },
+      "messageField": {
+        "placeholder": "Message",
+        "required": "Message is required field",
+        "minLength": "Message must be at least 10 characters long",
+        "maxLength": "Message must be at most 2000 characters long"
+      },
+      "submitButton": "Send"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "designerSign": "Designed by",
+    "designerName": "Yelizaveta Tkachenko"
   }
 }
