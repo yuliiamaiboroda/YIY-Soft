@@ -21,6 +21,7 @@ export default function Footer({ dictionary }: IProps) {
         >
           <Link
             href="/"
+            aria-label="Link to Home"
             className="block h-[40px] w-[86px] md:h-[54px] md:w-[116px]"
           >
             <svg className="h-full w-full">
@@ -32,6 +33,7 @@ export default function Footer({ dictionary }: IProps) {
             <a
               href="https://www.linkedin.com/in/yelizavetatkachenko/"
               target="_blank"
+              aria-label="Link to https://www.linkedin.com/in/yelizavetatkachenko/"
               rel="noopener noreferrer"
               className="hover:underline"
             >

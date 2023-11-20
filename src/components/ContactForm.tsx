@@ -141,6 +141,7 @@ export default function ContactForm({ dictionary }: IProps) {
         </label>
         <button
           type="submit"
+          aria-label="Send the form"
           className="rounded border-[3px] border-secondary px-8 py-4 font-medium
                 text-secondary transition-colors
                 duration-200 hover:bg-light-accent
