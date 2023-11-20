@@ -4,7 +4,7 @@ import type { Locale } from './i18n-config';
 // We enumerate all dictionaries here for better linting and typescript support
 // We also get the default import for cleaner types
 const dictionaries = {
-  uk: () => import('./dictionaries/uk.json').then(module => module.default),
+  ua: () => import('./dictionaries/ua.json').then(module => module.default),
   en: () => import('./dictionaries/en.json').then(module => module.default),
 };
 

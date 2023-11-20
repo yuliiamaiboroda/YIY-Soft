@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
                 locale === pathName.split('/')[1] ? ' font-semibold' : ''
               }`}
             >
-              {locale === 'en' ? 'EN' : 'UA'}
+              {locale.toUpperCase()}
             </Link>
           </li>
         );

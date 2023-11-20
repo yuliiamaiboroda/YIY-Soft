@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return [{ lang: 'uk' }, { lang: 'en' }];
+  return [{ lang: 'ua' }, { lang: 'en' }];
 }
 
 export default async function RootLayout({
@@ -33,7 +33,7 @@ export default async function RootLayout({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <html lang={lang}>
+    <html lang={lang === 'ua' ? 'uk' : lang}>
       <body className={`${montserat.className} flex min-h-screen flex-col`}>
         <Header dictionary={dictionary.navigation} />
         {children}
