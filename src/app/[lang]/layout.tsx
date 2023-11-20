@@ -33,8 +33,8 @@ export default async function RootLayout({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <html lang={lang}>
-      <body className={`${montserat.className} flex min-h-screen flex-col`}>
+    <html className={`${montserat.className}`} lang={lang}>
+      <body className='flex min-h-screen flex-col'>
         <Header dictionary={dictionary.navigation} />
         {children}
         <Footer dictionary={dictionary.footer} />
