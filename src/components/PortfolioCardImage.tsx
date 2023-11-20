@@ -20,7 +20,7 @@ export default function PortfolioCardImage({ imageUrl, url }: IProps) {
         width={0}
         height={0}
         sizes="100vw"
-        priority={true}
+        loading="lazy"
         style={{ width: '100%', height: 'auto' }}
       />
     </Link>
