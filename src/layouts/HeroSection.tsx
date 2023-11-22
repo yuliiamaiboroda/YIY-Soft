@@ -11,7 +11,7 @@ interface IProps {
 export default async function HeroSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
   const { title, subtitle, button } = dictionary.hero;
-  
+
   return (
     <div>
       <section className="relative overflow-hidden">
