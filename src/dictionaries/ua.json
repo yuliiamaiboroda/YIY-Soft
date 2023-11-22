@@ -1,7 +1,40 @@
 {
   "metadata": {
     "title": "YIY Софт",
-    "description": "Вітаємо в нашому YIY Софт — де інноваційність, експертиза та креативність вітатимуть вас"
+    "description": "Вітаємо в нашому YIY Софт — де інноваційність, експертиза та креативність вітатимуть вас.",
+    "keywords": [
+      "Веб-дизайн (Web design)",
+      "Веб-розробка (Web development)",
+      "Адаптивний дизайн (Responsive design)",
+      "Індивідуальний веб-сайт (Custom website)",
+      "Мобільно-дружні сайти (Mobile-friendly sites)",
+      "Взаємодія користувача (UX) (User experience (UX))",
+      "Дизайн користувальницького інтерфейсу (UI/UX design)",
+      "Розробка електронної комерції (E-commerce development)",
+      "Система управління контентом (CMS) (Content management system (CMS))",
+      "Розробка для React (React development)",
+      "Next.js розробка (Next.js development)",
+      "Обслуговування веб-сайтів (Website maintenance)",
+      "Фронтенд-розробка (Front-end development)",
+      "Бекенд-розробка (Back-end development)",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap",
+      "Редизайн веб-сайту (Website redesign)",
+      "Оптимізація веб-сайту (Website optimization)",
+      "Веб-сайти з оптимізацією для пошукових систем (SEO-friendly websites)",
+      "Графічний дизайн (Graphic design)",
+      "Дизайн логотипу (Logo design)",
+      "Брендінг (Branding)",
+      "Цифровий маркетинг (Digital marketing)",
+      "Інтеграція з соціальними мережами (Social media integration)",
+      "Веб-хостинг (Web hosting)",
+      "Реєстрація доменів (Domain registration)",
+      "Сумісність з різними браузерами (Cross-browser compatibility)",
+      "Веб-безпека (Web security)",
+      "Аналітика веб-сайту (Website analytics)"
+    ]
   },
   "navigation": {
     "services": "Сервіси",

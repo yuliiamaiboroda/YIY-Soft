@@ -14,12 +14,6 @@ const montserat = Montserrat({
   weight: ['400', '500', '600', '700'],
 });
 
-// export const metadata: Metadata = {
-//   title: 'YIY Soft',
-//   description:
-//     'Welcome to our YIY Soft – where innovation, expertise, and creativity unite to bring your digital dreams to life.',
-// };
-
 interface IProps {
   params: { lang: Locale };
 }
@@ -29,6 +23,49 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
   return {
     title: metadata.title,
     description: metadata.description,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
+    metadataBase: new URL('https://yiy-soft.vercel.app'),
+    alternates: {
+      canonical: 'https://yiy-soft.vercel.app',
+      languages: {
+        'en-US': '/en',
+        uk: '/ua',
+      },
+    },
+    openGraph: {
+      type: 'website',
+      siteName: 'YIY Soft',
+      url: 'https://yiy-soft.vercel.app',
+      title: metadata.title,
+      description: metadata.description,
+      images: [
+        {
+          url: 'https://yiy-soft.vercel.app/' + params.lang + '/og.png',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: 'https://yiy-soft.vercel.app/' + params.lang + 'og-alt.png',
+          width: 1800,
+          height: 1600,
+          alt: 'Website logo',
+        },
+      ],
+      locale: params.lang,
+    },
+    authors: [
+      { name: 'Yuliia Maiboroda', url: 'https://github.com/yuliiamaiboroda' },
+      { name: 'Ivan Drahoner', url: 'https://github.com/idrahoner' },
+      { name: 'Yaroslav Senyuk', url: 'https://github.com/SenYaroslav' },
+    ],
+    keywords: metadata.keywords,
   };
 }
 
