@@ -13,16 +13,16 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  const dicitonary = await getDictionary(lang);
+  const dictionary = await getDictionary(lang);
   return (
     <main>
-      <HeroSection lang={lang} />
-      <BusinessSection lang={lang} />
-      <FeatureSection lang={lang} />
-      <BenefitsSection lang={lang} />
-      <PortfolioSection lang={lang} />
-      <ClientSection lang={lang} />
-      <ContactUsSection dictionary={dicitonary.contactsSection} />
+      <HeroSection dictionary={dictionary.hero} />
+      <BusinessSection dictionary={dictionary.businessProcess} />
+      <FeatureSection dictionary={dictionary.professionalFeature} />
+      <BenefitsSection dictionary={dictionary.benefitsSection} />
+      <PortfolioSection dictionary={dictionary.portfolio} />
+      <ClientSection dictionary={dictionary.clientSection} />
+      <ContactUsSection dictionary={dictionary.contactsSection} />
     </main>
   );
 }

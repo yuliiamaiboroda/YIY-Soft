@@ -1,16 +1,17 @@
 import ThreeScene from '@/components/ThreeScene';
 import Link from 'next/link';
 import Container from '@/layouts/Container';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
 interface IProps {
-  lang: Locale;
+  dictionary: {
+    title: string;
+    subtitle: string;
+    button: string;
+  };
 }
 
-export default async function HeroSection({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-  const { title, subtitle, button } = dictionary.hero;
+export default function HeroSection({ dictionary }: IProps) {
+  const { title, subtitle, button } = dictionary;
 
   return (
     <div>

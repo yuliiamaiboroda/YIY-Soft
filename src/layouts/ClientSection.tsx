@@ -2,16 +2,19 @@ import SectionTitle from '@/components/SectionTitle';
 import SliderClients from '@/components/SliderClients';
 import Container from './Container';
 import Section from './Section';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
 interface IProps {
-  lang: Locale;
+  dictionary: {
+    title: string;
+    reviews: {
+      name: string;
+      review: string;
+    }[];
+  };
 }
 
-export default async function ClientSection({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-  const { title, reviews } = dictionary.clientSection;
+export default function ClientSection({ dictionary }: IProps) {
+  const { title, reviews } = dictionary;
 
   return (
     <div>
