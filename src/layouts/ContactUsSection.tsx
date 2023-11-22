@@ -1,6 +1,6 @@
 import Container from './Container';
 import Contacts from '@/components/Contacts';
-import ContactForm from '@/components/ContactForm';
+import ContactFormBlock from '@/components/ContactFormBlock';
 import { IContactsDictionary } from '@/types/contactsDictionary';
 
 interface IProps {
@@ -23,7 +23,7 @@ export default function ContactUsSection({ dictionary }: IProps) {
                     xl:py-16"
         >
           <Contacts dictionary={dictionary.contacts} />
-          <ContactForm dictionary={dictionary.contactForm} />
+          <ContactFormBlock dictionary={dictionary.contactForm} />
         </div>
       </Container>
     </section>

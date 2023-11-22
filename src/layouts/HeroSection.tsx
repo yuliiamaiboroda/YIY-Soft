@@ -1,6 +1,12 @@
-import ThreeScene from '@/components/ThreeScene';
+'use client';
+
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Container from '@/layouts/Container';
+
+const ThreeScene = dynamic(() => import('@/components/ThreeScene'), {
+  ssr: false,
+});
 
 interface IProps {
   dictionary: {
