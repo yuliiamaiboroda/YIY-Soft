@@ -2,17 +2,26 @@ import PortfolioCard from '@/components/PortfolioCard';
 import Container from '@/layouts/Container';
 import Section from './Section';
 import SectionTitle from '@/components/SectionTitle';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
-interface IProps {
-  lang: Locale;
+interface ICard {
+  title: string;
+  firstDescription: string;
+  secondDescription: string;
+  url: string;
 }
 
-export default async function PortfolioSection({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-  const { sectionTitle, userPage, adminPage, backend } = dictionary.portfolio;
-  
+interface IProps {
+  dictionary: {
+    sectionTitle: string;
+    userPage: ICard;
+    adminPage: ICard;
+    backend: ICard;
+  };
+}
+
+export default function PortfolioSection({ dictionary }: IProps) {
+  const { sectionTitle, userPage, adminPage, backend } = dictionary;
+
   return (
     <Section id="portfolio">
       <Container>

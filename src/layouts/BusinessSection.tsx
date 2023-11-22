@@ -2,16 +2,36 @@ import SectionSubtitle from '@/components/SectionSubtitle';
 import SectionTitle from '@/components/SectionTitle';
 import SliderBusiness from '@/components/SliderBusiness';
 import Container from './Container';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
-interface IProps {
-  lang: Locale;
+interface ISlide {
+  number: string;
+  title: string;
+  description: string;
 }
 
-export default async function BusinessSection({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-  const { title, subtitle, sliders } = dictionary.businessProcess;
+interface IProps {
+  dictionary: {
+    title: string;
+    subtitle: string;
+    sliders: {
+      slide01: ISlide;
+      slide02: ISlide;
+      slide03: ISlide;
+      slide04: ISlide;
+      slide05: ISlide;
+      slide06: ISlide;
+      slide07: ISlide;
+      slide08: ISlide;
+      slide09: ISlide;
+      slide10: ISlide;
+      slide11: ISlide;
+      slide12: ISlide;
+    };
+  };
+}
+
+export default function BusinessSection({ dictionary }: IProps) {
+  const { title, subtitle, sliders } = dictionary;
 
   return (
     <section

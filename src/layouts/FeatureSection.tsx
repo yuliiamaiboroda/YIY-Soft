@@ -3,16 +3,21 @@ import SectionSubtitle from '@/components/SectionSubtitle';
 import SectionTitle from '@/components/SectionTitle';
 import Container from './Container';
 import Section from './Section';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
 
 interface IProps {
-  lang: Locale;
+  dictionary: {
+    title: string;
+    subtitle: string;
+    cards: {
+      iconId: string;
+      title: string;
+      description: string;
+    }[];
+  };
 }
 
-export default async function FeatureSection({ lang }: IProps) {
-  const dictionary = await getDictionary(lang);
-  const { title, subtitle, cards } = dictionary.professionalFeature;
+export default function FeatureSection({ dictionary }: IProps) {
+  const { title, subtitle, cards } = dictionary;
 
   return (
     <Section id="services">
