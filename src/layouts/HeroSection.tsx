@@ -1,8 +1,12 @@
-import ThreeScene from '@/components/ThreeScene';
+// import ThreeScene from '@/components/ThreeScene';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import Container from '@/layouts/Container';
 import { Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-dictionary';
+const ThreeScene = dynamic(() => import('@/components/ThreeScene'), {
+  ssr: false,
+});
 
 interface IProps {
   lang: Locale;
@@ -11,7 +15,7 @@ interface IProps {
 export default async function HeroSection({ lang }: IProps) {
   const dictionary = await getDictionary(lang);
   const { title, subtitle, button } = dictionary.hero;
-  
+
   return (
     <div>
       <section className="relative overflow-hidden">

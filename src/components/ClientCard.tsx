@@ -15,6 +15,7 @@ export default function ClientCard({ name, review }: IProps) {
             alt="portrait placeholder"
             fill
             sizes="100vw"
+            loading="lazy"
           />
         </div>
         <h3 className="text-20 font-medium">{name}</h3>
