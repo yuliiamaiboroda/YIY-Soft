@@ -38,6 +38,8 @@ export function middleware(request: NextRequest) {
       '/images/portfolio/adminPage.jpg',
       '/images/portfolio/backend.jpg',
       '/images/clients/portrait_placeholder.jpg',
+      '/images/og.png',
+      '/images/og-alt.png',
       // Your other files in `public`
     ].includes(pathname)
   )
