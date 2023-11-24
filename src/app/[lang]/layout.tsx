@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     },
     metadataBase: new URL('https://yiy-soft.vercel.app'),
     alternates: {
-      canonical: 'https://yiy-soft.vercel.app',
+      canonical: '/',
       languages: {
         'en-US': '/en',
         uk: '/ua',
