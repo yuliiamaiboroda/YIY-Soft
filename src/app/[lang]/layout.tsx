@@ -45,19 +45,19 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
       url: 'https://yiy-soft.vercel.app',
       title: metadata.title,
       description: metadata.description,
-      images: [
-        {
-          url: 'https://yiy-soft.vercel.app/og.png',
-          width: 800,
-          height: 600,
-        },
-        {
-          url: 'https://yiy-soft.vercel.app/og-alt.png',
-          width: 1800,
-          height: 1600,
-          alt: 'Website logo',
-        },
-      ],
+      // images: [
+      //   {
+      //     url: 'https://yiy-soft.vercel.app/og.png',
+      //     width: 800,
+      //     height: 600,
+      //   },
+      //   {
+      //     url: 'https://yiy-soft.vercel.app/og-alt.png',
+      //     width: 1800,
+      //     height: 1600,
+      //     alt: 'Website logo',
+      //   },
+      // ],
       locale: params.lang,
     },
     authors: [
