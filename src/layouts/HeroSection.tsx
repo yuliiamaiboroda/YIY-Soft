@@ -22,7 +22,7 @@ export default function HeroSection({ dictionary }: IProps) {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <div className="absolute -z-10 bg-black pl-[30vw] lg:pl-[10vw]">
+        <div className="absolute -z-10 h-screen w-screen bg-black pl-[30vw] lg:pl-[10vw]">
           <ThreeScene />
         </div>
         <Container>
