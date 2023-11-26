@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     },
     metadataBase: new URL('https://yiy-soft.vercel.app'),
     alternates: {
-      canonical: '/',
+      canonical: '/en',
       languages: {
         'en-US': '/en',
         uk: '/ua',
@@ -45,25 +45,12 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
       url: 'https://yiy-soft.vercel.app',
       title: metadata.title,
       description: metadata.description,
-      // images: [
-      //   {
-      //     url: 'https://yiy-soft.vercel.app/og.png',
-      //     width: 800,
-      //     height: 600,
-      //   },
-      //   {
-      //     url: 'https://yiy-soft.vercel.app/og-alt.png',
-      //     width: 1800,
-      //     height: 1600,
-      //     alt: 'Website logo',
-      //   },
-      // ],
       locale: params.lang,
     },
     authors: [
-      { name: 'Yuliia Maiboroda', url: 'https://github.com/yuliiamaiboroda' },
       { name: 'Ivan Drahoner', url: 'https://github.com/idrahoner' },
       { name: 'Yaroslav Senyuk', url: 'https://github.com/SenYaroslav' },
+      { name: 'Yuliia Maiboroda', url: 'https://github.com/yuliiamaiboroda' },
     ],
     keywords: metadata.keywords,
   };
