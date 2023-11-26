@@ -48,9 +48,9 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
       locale: params.lang,
     },
     authors: [
+      { name: 'Yuliia Maiboroda', url: 'https://github.com/yuliiamaiboroda' },
       { name: 'Ivan Drahoner', url: 'https://github.com/idrahoner' },
       { name: 'Yaroslav Senyuk', url: 'https://github.com/SenYaroslav' },
-      { name: 'Yuliia Maiboroda', url: 'https://github.com/yuliiamaiboroda' },
     ],
     keywords: metadata.keywords,
   };
